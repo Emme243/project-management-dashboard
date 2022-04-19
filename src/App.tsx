@@ -1,9 +1,7 @@
+import { Auth } from './modules/auth/pages/auth';
+
 function App() {
-  return (
-    <div className="text-center my-3">
-      <h1 className="text-5xl font-medium">Project Management Dashboard</h1>
-    </div>
-  );
+  return <Auth></Auth>;
 }
 
 export default App;
