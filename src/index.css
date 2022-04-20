@@ -12,10 +12,21 @@
   }
 
   * {
-    @apply transition-all;
+    @apply transition-all selection:bg-blue-400 selection:text-white;
   }
 
   .link {
     @apply cursor-pointer text-sky-600 underline decoration-sky-600 decoration-1;
   }
+}
+
+.swiper-pagination-bullet {
+  @apply bg-white  w-3 h-3;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 13%;
 }

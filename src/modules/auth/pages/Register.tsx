@@ -66,7 +66,7 @@ export const Register = () => {
   return (
     <AuthLayout
       formChild={
-        <form onSubmit={handleSubmit(onSubmit)} className="my-auto">
+        <form onSubmit={handleSubmit(onSubmit)}>
           <p className="text-gray-400 text-center">Create a new account</p>
           <Input
             containerClass="mt-4"

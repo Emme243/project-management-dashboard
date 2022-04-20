@@ -37,7 +37,7 @@ export const Login = () => {
   return (
     <AuthLayout
       formChild={
-        <form onSubmit={handleSubmit(onSubmit)} className="my-auto">
+        <form onSubmit={handleSubmit(onSubmit)}>
           <p className="text-gray-400 text-center">
             Enter your credentials to access your account!
           </p>
@@ -65,7 +65,7 @@ export const Login = () => {
         </form>
       }
       footerChild={
-        <div className="mt-auto space-y-2">
+        <div className="space-y-2 lg:space-x-1 mt-8">
           <div className="text-center">
             <span className="text-gray-400">New here? </span>
             <Link to="/register" className="link">
