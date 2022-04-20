@@ -2,7 +2,7 @@ module.exports = {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     fontFamily: {
-      sans: ['Inter', 'Arial', 'sans-serif'],
+      sans: ['Silka', 'Arial', 'sans-serif'],
     },
     extend: {
       colors: {
