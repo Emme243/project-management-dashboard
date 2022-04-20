@@ -9,8 +9,8 @@ export const Auth = () => {
 
       {/*Right side: Login and Register components*/}
       <div className="grow">
-        <Login />
-        {/*<Register />*/}
+        {/*<Login />*/}
+        <Register />
       </div>
     </div>
   );

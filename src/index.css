@@ -14,4 +14,8 @@
   * {
     @apply transition-all;
   }
+
+  .link {
+    @apply cursor-pointer text-sky-600 underline decoration-sky-600 decoration-1;
+  }
 }

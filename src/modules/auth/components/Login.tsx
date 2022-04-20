@@ -3,6 +3,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { Button } from '../../../components/Button';
 import { Input } from '../../../components/Form/Input';
+import { invalidEmailMsg, maxLengthMsg, minLengthMsg, requiredMsg } from '../helpers/formMessages';
 
 interface Inputs {
   email: string;
@@ -11,16 +12,12 @@ interface Inputs {
 
 const schema = yup
   .object({
-    email: yup
-      .string()
-      .required('Email must be required')
-      .email("It's not a valid email")
-      .lowercase()
-      .trim(),
+    email: yup.string().required(requiredMsg('Email')).email(invalidEmailMsg()).lowercase().trim(),
     password: yup
       .string()
-      .required('Password must be required')
-      .min(5, 'Password must be at least 5 characters'),
+      .required(requiredMsg('Password'))
+      .min(5, minLengthMsg(5))
+      .max(15, maxLengthMsg(15)),
   })
   .required();
 
@@ -75,14 +72,10 @@ export const Login = () => {
       <div className="mt-auto space-y-2">
         <div className="text-center">
           <span className="text-gray-400">New here? </span>
-          <span className="cursor-pointer text-sky-600 underline decoration-sky-600 decoration-1">
-            Sing up
-          </span>
+          <span className="link">Sing up</span>
         </div>
         <div className="text-center">
-          <span className="cursor-pointer text-sky-600 underline decoration-sky-600 decoration-1">
-            Forgot your password?
-          </span>
+          <span className="link">Forgot your password?</span>
         </div>
       </div>
     </div>
